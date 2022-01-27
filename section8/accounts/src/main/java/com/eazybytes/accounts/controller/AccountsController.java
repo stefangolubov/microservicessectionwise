@@ -3,28 +3,21 @@
  */
 package com.eazybytes.accounts.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.eazybytes.accounts.config.AccountsServiceConfig;
-import com.eazybytes.accounts.model.Accounts;
-import com.eazybytes.accounts.model.Cards;
-import com.eazybytes.accounts.model.Customer;
-import com.eazybytes.accounts.model.CustomerDetails;
-import com.eazybytes.accounts.model.Loans;
-import com.eazybytes.accounts.model.Properties;
+import com.eazybytes.accounts.model.*;
 import com.eazybytes.accounts.repository.AccountsRepository;
 import com.eazybytes.accounts.service.client.CardsFeignClient;
 import com.eazybytes.accounts.service.client.LoansFeignClient;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author Eazy Bytes
