@@ -43,6 +43,9 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 - Kubernetes - https://kubernetes.io/
 - GCP - https://console.cloud.google.com/
 - GConsole -  https://cloud.google.com/sdk
+- Helm -  https://helm.sh/
+- Keycloak  -  https://www.keycloak.org/
+- Istio -  https://istio.io/
 
 ## Maven Commands used in the course
 
