@@ -18,6 +18,12 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 * Section 11 - Distributed tracing & Log aggregation (Challenge 7)
 * Section 12 - Monitoring Microservices Metrics & Health (Challenge 8)
 * Section 13 - Automatic self-heal, autoscale, deployments (Challenge 9)
+* Section 14 - Deploying all microservices into K8s cluster
+* Section 15 - Deep Dive on Helm
+* Section 16 - Securing Microservices using K8s Service
+* Section 17 - Securing Microservices using OAuth2 client credentials grant flow
+* Section 18 - Securing Microservices using OAuth2 Authorization code grant flow
+* Section 19 - Introduction to K8s Ingress & Service Mesh (Istio)
 
 ## Pre-requisite for the course
 - Good understanding on Java and Spring concepts
