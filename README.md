@@ -108,4 +108,10 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 | "kubectl autoscale deployment accounts-deployment --min=3 --max=10 --cpu-percent=70" | To create automatic scaling using HPA for a deployment inside your cluster |
 | "kubectl logs node-id" | To get a logs of a given node inside your cluster |
 
+## Helm Commands used in the course
 
+|     Helm Command       |     Description          |
+| ------------- | ------------- |
+| "helm create chartname" | Create a blank & default chart with the given name |
+| "helm dependencies build" | To recompile the given helm chart |
+| "helm install [NAME] [CHART]" | Install the given helm chart into K8s cluster |
