@@ -22,7 +22,7 @@ your pom.xml should looks like shown below,
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.7.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eaztbytes</groupId>
@@ -31,8 +31,8 @@ your pom.xml should looks like shown below,
 	<name>configserver</name>
 	<description>Configuration Server for Bank Microservices</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.2</spring-cloud.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -156,7 +156,7 @@ encrypt.key=eazybytes
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.7.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eaztbytes</groupId>
@@ -166,8 +166,8 @@ encrypt.key=eazybytes
 	<name>accounts</name>
 	<description>Microservice for Accounts</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.2</spring-cloud.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -236,7 +236,7 @@ encrypt.key=eazybytes
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.7.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eaztbytes</groupId>
@@ -246,8 +246,8 @@ encrypt.key=eazybytes
 	<name>loans</name>
 	<description>Microservice for Loans</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.2</spring-cloud.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -321,7 +321,7 @@ encrypt.key=eazybytes
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.7.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eaztbytes</groupId>
@@ -331,8 +331,8 @@ encrypt.key=eazybytes
 	<name>cards</name>
 	<description>Microservice for Cards</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.2</spring-cloud.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -399,7 +399,7 @@ encrypt.key=eazybytes
 -  Make sure all the required and associated libraries are downloaded under maven dependencies of **accounts**, **loans**, **cards** microservices.
 -  Like we discussed in the course, add **@RefreshScope** annotation on top of **AccountsApplication.java, LoansApplication.java and CardsApplication.java**. This is completely
    optional and can be used in the scenarios where we want to refresh the properties loaded into the given microservice with out the need of restart. In order to refresh the 
-   properties we can invoke the POST API **/actuator/refresh** exposed by the actuator through Postman. This refresh API will be exposed only if we configure                        **management.endpoints.web.exposure.include=*** inside **application.properties** like mentioned in the below step.
+   properties we can invoke the POST API **/actuator/refresh** exposed by the actuator through Postman. This refresh API will be exposed only if we configure **management.endpoints.web.exposure.include=*** inside **application.properties** like mentioned in the below step.
 -  Open the **application.properties** present inside **accounts**, **loans**, **cards** microservices and make sure to update the properties related to Config server details 
    inside them. After making the changes, your **application.properties** files should like below. For more details please check the course videos.
 ### \accounts\src\main\resources\application.properties
