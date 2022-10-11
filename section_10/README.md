@@ -27,7 +27,7 @@ inside our microservices network.
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.7.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eaztbytes</groupId>
@@ -36,8 +36,8 @@ inside our microservices network.
 	<name>gatewayserver</name>
 	<description>Spring Boot project for Spring Cloud Gateway</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2020.0.2</spring-cloud.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -93,11 +93,10 @@ inside our microservices network.
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
 ```
-- Open the SpringBoot main class **GatewayserverApplication.java** . We can always identify the main class in a Spring Boot project by looking for the annotation 
-  **@SpringBootApplication**. On top of this main class, please add annotation **'@EnableEurekaClient'**. Add a routing configurations by creating a @Bean **RouteLocator**
-  like we discussed in the course. After making the changes your **GatewayserverApplication.java** class should like below,
+- Open the SpringBoot main class **GatewayserverApplication.java** . We can always identify the main class in a Spring Boot project by looking for the annotation **@SpringBootApplication**. On top of this main class, please add annotation **'@EnableEurekaClient'**. Add a routing configurations by creating a @Bean **RouteLocator** like we discussed in the course. After making the changes your **GatewayserverApplication.java** class should like below,
 
 ### \gatewayserver\src\main\java\com\eaztbytes\gatewayserver\GatewayserverApplication.java
 
@@ -157,6 +156,7 @@ management.endpoints.web.exposure.include=*
 info.app.name=Gateway Server Microservice
 info.app.description=Eazy Bank Gateway Server Application
 info.app.version=1.0.0
+management.info.env.enabled = true
 
 spring.cloud.gateway.discovery.locator.enabled=true
 spring.cloud.gateway.discovery.locator.lowerCaseServiceId=true
@@ -308,11 +308,8 @@ public class FilterUtility {
 
 }
 ```
-- Like we discussed in the course, update all the important classes like **AccountsController.java, LoansController.java, CardsController.java** to accept the 
-  **@RequestHeader("eazybank-correlation-id") String correlationid** as input inside the method parameters.
-- Restart your **gatewayserver** microservice and invoke the REST API http://localhost:8072/eazybank/accounts/myCusomerDetails through Postman by passing the below request 
-  in JSON format. You should get the response from the accounts microservices which has all the details related to account, loans and cards. Also validate 
-  if you received custom header **eazybank-correlation-id** that we created in the response.
+- Like we discussed in the course, update all the important classes like **AccountsController.java, LoansController.java, CardsController.java** to accept the **@RequestHeader("eazybank-correlation-id") String correlationid** as input inside the method parameters.
+- Restart your **gatewayserver** microservice and invoke the REST API http://localhost:8072/eazybank/accounts/myCusomerDetails through Postman by passing the below request in JSON format. You should get the response from the accounts microservices which has all the details related to account, loans and cards. Also validate if you received custom header **eazybank-correlation-id** that we created in the response.
   ```json
   {
     "customerId": 1
