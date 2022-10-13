@@ -10,4 +10,4 @@ global:
   userinfouri: http://keycloak:80/realms/master/protocol/openid-connect/userinfo
   secretName: eazybankprod-secret
   keycloakclientid: eazybank-gateway-ui
-  keycloakclientsecret: 1o7uTllHLVEhTTibVIjKR1ZEj5bZiLYp
+  keycloakclientsecret: MdbTzbRiOHoJAx5CTJsAC8UfkwfgIJZP
